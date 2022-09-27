@@ -1,6 +1,6 @@
 # The BankAccount class simulates a bank account.
 
-class BankAccount:
+class BankAccount: #name of class , one attribute: balance
     
 
 # The __init__ method accepts an argument for
@@ -20,8 +20,8 @@ class BankAccount:
       # from the account.
 
     def withdraw(self, amount):
-        if self.__balance >= amount:
-            self.__balance -= amount
+        if self.__balance >= abs(amount):
+            self.__balance -= abs(amount)
         else:
             print('Error: Insufficient funds')
 
@@ -33,5 +33,5 @@ class BankAccount:
 
 
 
-    def __str__(self):
+    def __str__(self): #return an attribute or a bunch of attributes in a customized way
         return 'The balance is $' + format(self.__balance, ',.2f')

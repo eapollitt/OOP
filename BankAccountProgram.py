@@ -8,12 +8,12 @@ def main():
    start_bal = float(input('Enter your starting balance: '))
 
    # Create a BankAccount object.
-   savings = bc.BankAccount(start_bal)
+   savings = bc.BankAccount(start_bal) #savings is the instance of the bank account class
 
    # Deposit the user's paycheck.
    pay = float(input('How much were you paid this week? '))
    print('I will deposit that into your account.')
-   savings.deposit(pay)
+   savings.deposit(pay) #cant do BandAccount.deposit
 
    # Display the balance.
    print('Your account balance is $', format(savings.get_balance(), ',.2f'),
